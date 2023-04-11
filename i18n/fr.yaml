@@ -1,0 +1,38 @@
+- id: skip_to_content
+  translation: passer
+- id: nav_main_navigation
+  translation: Menu principal
+- id: nav_button_menu
+  translation: Menu
+- id: discuss_show_comments_button
+  translation: Montrer les commentaires
+- id: discuss_comments_disabled
+  translation: Les commentaires sont désactivés.
+- id: discuss_js_disabled
+  translation: JavaScript doit être activé pour voir les commentaires Disqus.
+- id: dark_theme
+  translation: "theme sombre :"
+- id: table_of_contents
+  translation: Table of Contents
+- id: publish_date
+  translation: "Date de publication :"
+- id: last_updated
+  translation: "Dernière mise-à-jour :"
+- id: tags
+  translation: "Tags:"
+- id: aria_label_tags
+  translation: tags
+- id: search_placeholder
+  translation: Recherche par titre...
+- id: search_aria_label
+  translation: Recherche par titre
+- id: home_menu
+  translation: Accueil
+- id: blog_menu
+  translation: Blog
+- id: tags_menu
+  translation: Tags
+- id: about_menu
+  translation: A Propos
+- id: rss_menu
+  translation: RSS
