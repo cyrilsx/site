@@ -1,4 +1,9 @@
-=== Developer Joy - How great teams get s%*t done
+---
+title: "voxxeddays Zürich - Developer Joy"
+date: 2023-04-18T21:05:05-05:00
+tags: [devops] 
+---
+= Developer Joy - How great teams get s%*t done
 Sven PETERS - https://svenpet.com/[Website]
 
 Sven travaille chez Atlassian et est particulièrement interessé par le côté culture, productivité et management.
