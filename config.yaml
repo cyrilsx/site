@@ -147,3 +147,23 @@ markup:
   tableOfContents:
     endLevel: 6
     startLevel: 2
+security:
+  enableInlineShortcodes: false
+  exec:
+    allow:
+    - ^dart-sass-embedded$
+    - ^go$
+    - ^npx$
+    - ^postcss$
+    - ^asciidoctor$
+    osEnv:
+    - (?i)^((HTTPS?|NO)_PROXY|PATH(EXT)?|APPDATA|TE?MP|TERM|GO\w+)$
+  funcs:
+    getenv:
+    - ^HUGO_
+    - ^CI$
+  http:
+    methods:
+    - (?i)GET|POST
+    urls:
+    - .*
