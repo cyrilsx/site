@@ -27,7 +27,7 @@ languages:
             weight: 5
   fr: 
     params:
-      description: Voici mes notes sur tout ce que j'aime lore, écouter et ecrire.. My writing is _pour_ but this is for myself. Enjoy !
+      description: Voici quelques notes _de moi_. Je ne suis pas un pro de la dictée _mais_ écrire me permet de mémoriser et de partager. J'espère que cela vous sera utile !
       homeMetaContent: An accessibility-friendly Hugo theme, ported from the original Cupper project.
       footer: Généré avec [Hugo](https://gohugo.io/). Utilise le thème [Cupper](https://github.com/zwbetz-gh/cupper-hugo-theme).
       navigation:
