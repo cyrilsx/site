@@ -28,7 +28,7 @@ languages:
   fr: 
     params:
       description: Voici quelques notes _de moi_. Je ne suis pas un pro de la dictée _mais_ écrire me permet de mémoriser et de partager. J'espère que cela vous sera utile !
-      homeMetaContent: An accessibility-friendly Hugo theme, ported from the original Cupper project.
+      homeMetaContent: Idées, Resentis, Erreurs, Notes de Cyril dans quelques simples pages. Je vous aime!
       footer: Généré avec [Hugo](https://gohugo.io/). Utilise le thème [Cupper](https://github.com/zwbetz-gh/cupper-hugo-theme).
       navigation:
         help: Aide
