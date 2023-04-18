@@ -1,0 +1,59 @@
+=== Spring Modulith – Spring for the Architecturally Curious Developer
+Oliver DROTBOHM - https://github.com/odrotbohm[github]
+
+Spring nous fournit beaucoup de liberté en terme d'architecture applicatif. Typiquement la plupart des développeurs
+sépare leur application par unité technique.
+
+* `org.example.superapp.dao`
+* `org.example.superapp.service`
+* `org.example.superapp.resource`
+* `org.example.superapp.domain`
+
+
+Dans ce genre d'architecture, le package sert seulement à grouper des classes. Les dépendances importants entre les composants sont obligés de
+passer les limites de leur package.
+
+Le principe _SOLID_ `Single Responsability` dicte que la `vue` doit être séparer du `controller`, cependant, cela ne 
+signifie pas qu'il doit être dans 2 endroits totalement différent (comme dans des frameworks comme Django, Rails...).
+
+De plus cette contruction ne nous donne pas d'information sur le métier de l'application. Dan North mentionne ce problème et utilise les termes suivant : **Domain Based Structure** et **Domain Based Boundaries**.
+
+image::java/package_cohesion.svg[Inline,600,opts=inline]
+
+Donc plutôt que grouper les composants par module technique, nous allons les mettre par unité métier. Pourquoi pas organiser nos packages comme ci-dessous : 
+
+* `org.example.ecommerce.order`
+* `org.example.ecommerce.card`
+* `org.example.ecommerce.inventory`
+
+Plus d'information sont disponibles dans le billet de blog de Dan North https://dannorth.net/2022/02/10/cupid-for-joyful-coding/[CUPID for joyful coding].
+
+.Organisation horizontale vs verticale
+[cols="4,4,4,4",stripes=even]
+|===
+|  
+|Order
+|Inventory
+|Card
+
+|Web - `@Controller`
+|
+|
+|
+
+|Business Logic - `@Component` 
+|
+|
+|
+
+|Data Access - `@Repository`
+|
+|
+|
+|=== 
+
+Pourquoi pas utiliser le système modulaire du jdk9 :
+
+    * plus lourd que spring-modulith pour des petites applications
+
+

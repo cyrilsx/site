@@ -1,0 +1,20 @@
+---
+title: "Voxxeddays"
+date: 2023-04-18T07:01:25+02:00
+draft: true
+---
+
+= Documentation
+Cyril Collen - <cyril.collen@zas.admin.ch>
+:toc:
+:icons: font
+:url-repo: http://intra.zas.admin.ch/bitbucket/scm/rc/rc-docs.git
+
+== Conference VoxxedDays Zürich 2023
+
+include::ia/artist_ai_bernhard_wagner.adoc[]
+include::arch/revisiting_design_pattern_java20.adoc[]
+include::java/spring_modulith.adoc[]
+include::java/games_of_loom.adoc[]
+include::gen/developer_joy.adoc[]
+
