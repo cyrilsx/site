@@ -6,16 +6,16 @@ tags: [dev, ia, voxxeddays]
 # L'intelligence articielle et les artistes
 Ce billet de blog a été écrit suita à la présentation de Bernhard WAGNER : As an Artist, AI Is Your Assistant, Not Your Competitor!
 
-Bernhard est un passioné de musique, professeur et un ingénieur logiciel. Dans cette présentation, il combine 2 de ces passions, la musique et l'ingéniorie via l'intelligence articielle. 
+Bernhard est un passioné de musique, professeur et un ingénieur logiciel. Dans cette présentation, il combine 2 de ces passions, la musique et l'ingénierie via l'intelligence articielle. 
 Il essaye de répondre, de manière ludique _(c'est un professeur!)_, au problème suivant: **quelle est la place de l'intelligence artificielle dans le monde de l'art ?**
 
 Certain artiste ont montré que c'est possible de travailler en symbiose avec cet nouvel outil.
 C'est le cas de [Kris Kashtanova](https://kris.art), une artiste New-Yorkaise. Elle a réussi à obtenir des droits _(copyright)_ pour ces oeuvres. 
 
-> **_NOTE:_** Elle a perdu les droits plus tard, elle les retrouve et ça donne en boucle...
+> **_NOTE:_** Elle a perdu les droits plus tard, elle les retrouve et ça tourne en boucle...
 
 ## Contexte en 2023
-Autour de cette question, il faut contextualiser l'AI et toutes les contreverses:
+Autour de cette question, il faut contextualiser l'AI et toutes les contreverses :
 
 * [28/01/2023] Procès de Microsoft avec le produit GitHub Copilot : [article The Verge](https://www.theverge.com/2023/1/28/23575919/microsoft-openai-github-dismiss-copilot-ai-copyright-lawsuit)
 * [18/01/2023] Procès des artistes sur les oeuvres d'art générées par l'IA : [article de la BBC](https://www.bbc.com/news/technology-64285227)
@@ -28,18 +28,18 @@ Dans le cadre de cette _keynote_ cette question ne sera _évidemment_ pas répon
 
 ## La musique comme illustration
 
-Le terme *AlgoRave* qui permet des artistes de coder en live de la musique avec un autre artiste pour crééer des visualisations : très [nerdy](https://www.thetimes.co.uk/article/algorave-the-nerdiest-clubbing-trend-of-them-all-h7hghst67).
+Le terme *AlgoRave* qui permet des artistes de coder en live de la musique avec un autre artiste pour créer des visualisations : très [nerdy](https://www.thetimes.co.uk/article/algorave-the-nerdiest-clubbing-trend-of-them-all-h7hghst67).
 
 ![AlgoRave](../post/voxxed2023/ia/algo_rave.jpg)
 
-Il existe des outils qui permettent de créer, improviser et de composer de la musique : 
+Il existe donc des outils qui permettent de créer, improviser et de composer de la musique : 
 
 * [tidalcycles](https://tidalcycles.org/) est un outil en _haskell_ qui permet de créer de la musique en live
 * [hydra](https://github.com/ojack/hydra-sync) permet de créer des visualisations en live
 
 ## TidalCycles
 
-Une bibliothèque de pattern:
+Une bibliothèque de _pattern_ :
 
 1. Un editeur texte (Vim)
 2. Un interpreteur (Haskell)
@@ -68,7 +68,7 @@ note("c3 eb3 g3 bb3").palindrome()
 ```
 
 ## Intelligence Artificielle
-ChatGPT3 connait TidalCycles. Il peut faire des visualisations en live pour les compositions des artistes/compositeurs.
+ChatGPT3 connait TidalCycles. Il peut créer des visualisations en direct pour les compositions des artistes/compositeurs.
 _p5js_ a été utilisé pour créer la visualisation.
 Exemple sous [l'éditeur](https://editor.p5js.org/) :
 ```js
@@ -91,6 +91,10 @@ Cependant l'IA n'a aucune connaissance spatiale, donc, elle a besoin de l'aide d
 ## Conclusion 
 L'IA est un outil et ne replacera pas les artistes.
 
-## Resenti
-Le fond de la présentation est très interessant. Les problèmes soulevés sont d'actualités et nous insiste à reflexion. La présentation s'est un peu attardé sur les outils pour faire du live coding et être DJ en même temps, cependant, c'est resté très ludique tout en soulevant des problèmes de l'IA.
+## Mon avis
+Le fond de la présentation est très intéressant. Les problèmes soulevés sont d'actualités et nous insiste à réflexion. La présentation s'est un peu attardée sur les outils pour faire du live coding et être DJ en même temps, cependant, le tout est resté très ludique tout en soulevant des problèmes de l'IA.
+
+Je suis plus mitigé sur la conclusion du présentateur. Je pense aussi en effet que l'IA ne pourra jamais créer des oeuvres originales comme les artistes. Cependant, je comprends aussi que les artistes s'interroge, s'inquiète sur l'IA et leur apprentissage. L'IA a besoin d'exemple d'art. Quelles sont les oeuvres utilisés pour entraîner l'IA ? Cette influence devraît être documenté sur l'oeuvre finale généré par l'IA.
+
+Finalement cette article et cette présentation m'a apporté plus de question que de réponse. En tout cas, cela a réveillé ma curiosité et j'ai hâte de voir la suite.
 
