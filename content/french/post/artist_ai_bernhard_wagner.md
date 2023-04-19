@@ -12,7 +12,7 @@ Il essaye de répondre, de manière ludique _(c'est un professeur!)_, au problè
 Certain artiste ont montré que c'est possible de travailler en symbiose avec cet nouvel outil.
 C'est le cas de [Kris Kashtanova](https://kris.art), une artiste New-Yorkaise. Elle a réussi à obtenir des droits _(copyright)_ pour ces oeuvres. 
 
-NOTE: Elle a perdu les droits plus tard, elle les retrouve et ça donne en boucle...
+> **_NOTE:_** Elle a perdu les droits plus tard, elle les retrouve et ça donne en boucle...
 
 ## Contexte en 2023
 Autour de cette question, il faut contextualiser l'AI et toutes les contreverses:
