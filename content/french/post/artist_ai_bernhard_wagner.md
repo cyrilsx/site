@@ -94,7 +94,8 @@ L'IA est un outil et ne replacera pas les artistes.
 ## Mon avis
 Le fond de la présentation est très intéressant. Les problèmes soulevés sont d'actualités et nous insiste à réflexion. La présentation s'est un peu attardée sur les outils pour faire du live coding et être DJ en même temps, cependant, le tout est resté très ludique tout en soulevant des problèmes de l'IA.
 
-Je suis plus mitigé sur la conclusion du présentateur. Je pense aussi en effet que l'IA ne pourra jamais créer des oeuvres originales comme les artistes. Cependant, je comprends aussi que les artistes s'interroge, s'inquiète sur l'IA et leur apprentissage. L'IA a besoin d'exemple d'art. Quelles sont les oeuvres utilisés pour entraîner l'IA ? Cette influence devraît être documenté sur l'oeuvre finale généré par l'IA.
+Je suis plus mitigé sur la conclusion du présentateur. Je pense aussi en effet que l'IA ne pourra jamais créer des oeuvres originales comme les artistes. 
+Cependant, je comprends aussi que les artistes s'interrogent ou s'inquiètent sur l'IA et leur apprentissage. L'IA a besoin d'exemple d'art. Quelles sont les oeuvres utilisés pour entraîner l'IA ? Cette influence devraît être documenté sur l'oeuvre finale généré par l'IA.
 
 Finalement cette article et cette présentation m'a apporté plus de question que de réponse. En tout cas, cela a réveillé ma curiosité et j'ai hâte de voir la suite.
 

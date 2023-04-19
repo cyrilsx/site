@@ -3,8 +3,8 @@ title: "voxxeddays Zürich - Developer Joy"
 date: 2023-04-18T21:05:05-05:00
 tags: [devops] 
 ---
-= Developer Joy - How great teams get s%*t done
-Sven PETERS - https://svenpet.com/[Website]
+# Developer Joy - How great teams get s%*t done
+Sven PETERS - [Site internet](https://svenpet.com/)
 
 Sven travaille chez Atlassian et est particulièrement interessé par le côté culture, productivité et management.
 Après un exemple sur le Bethlehem Steel, il pose la question suivante : comment mesurer la productivité d'un développeur ?
@@ -19,7 +19,7 @@ Après un exemple sur le Bethlehem Steel, il pose la question suivante : comment
 
 En parallèle de la mesure de la productivité, qu'est ce qui est apparut dans leur monde en une dizaine d'année :
 
-image::gen/developer_load.svg[Charge Cognitive]
+![Charge Cognitive](../post/voxxed2023/gen/developer_load.svg)
 
 **Comment continuer à apprécier (et continuer à être productif) ce travail de développeur avec toute cette charge qui ne cesse d'augmenté ?**
 
@@ -33,19 +33,19 @@ du développement n'est plus la même. Comment un développeur peut avoir de la 
 3. La valeur qu'il apporte au monde (utilisateur, client, assuré, citoyen...)
 // On doit avouer, on se sent bien lorsqu'on sait que notre travail a du sens, qu'il apporte de la valeur
 
-==== La qualité du `dev`
+## La qualité du `dev`
 
 Commençons par la **dette technique**, en chiffre, c'est **42%** du temps de développement & seulement **10%** des équipes qui la gèrent.
 
-===== Coding guideline
+### Coding guideline
 
 Il faut avoir les outils pour automatiser la vérification de nos `coding guidelines` : plugins des éditeurs, sonar...
 
 C'est bien, mais pas suffisant ;-)
 
-===== Revue de code
+### Revue de code
 
-TIP: Ne pas être un c*%@!? _antipathique_
+> **_NOTE:_**: Ne pas être un c*%@!? _antipathique_
 
 La personne qui revoit le code devrait:
 
@@ -53,8 +53,8 @@ La personne qui revoit le code devrait:
 * Etre constructif sans ces remarques
 * Expliquer son raisonnement
 
-===== Passer de bien à top
-====== DORA 
+### Passer de bien à excellent
+#### DORA 
 
 Les métriques https://www.devops-research.com/research.html[DORA] et les indicateurs de flux permettent de **mesurer la performance des équipes responsables des produits.**
 
@@ -84,7 +84,7 @@ développement - livraison.
 
 Une fois que ces métriques sont disponibles, il faut mettre en place *des baselines* _non-négociable_.
 
-===== Check Ops _rituel hebdo_
+#### Check Ops _rituel hebdo_
 
 Ce rituel peut être implémenté pour mieux comprendre et améliorer la santé opérationnelle des composants d'une équipe.
 Elle consiste à poser les données/métriques (ex DORA) et suivre les améliorations dans le temps.
@@ -97,7 +97,7 @@ Les qualités des métriques suivantes à contrôler avec les baselines et le ch
 * Temps de résolution des vulnérabilités
 * Nombre d'occurence des incidents
 
-==== La progression
+#### La progression
 
 Cette section commence avec quelques questions :
 
@@ -105,26 +105,26 @@ Cette section commence avec quelques questions :
 * Qui a appricié ces réunions ?
 * Qui a été interrompu pendant qu'il était entrain de coder ?
 
-===== Flux de travail - les revues de code
-image::gen/developer_flow.svg[Flux de travail]
+####  Flux de travail - les revues de code
+![Flux de travail](../post/voxxed2023/gen/developer_flow.svg)
 
 WARNING: Les revues de code prennent 3 jours en moyenne, soit 3 jours à travailler sur autres choses et revenir dessus.
 
 Le conseil donné a été d'intégré un bot qui rappelle régulièrement qu'une pull request est en attente. Cela a permet dans le cadre d'une entreprise de passer de 3 à 1.2 jours pour
 les pull request.
 
-===== Flux de travail - l'autonomie
+#### Flux de travail - l'autonomie
 
-Un parallèle peut être considéré entre notre flux de travail et le https://www.youtube.com/watch?v=yITr127KZtQ[traffic routier].
+Un parallèle peut être considéré entre notre flux de travail et le [traffic routier](https://www.youtube.com/watch?v=yITr127KZtQ).
 
-image::gen/traffic_flow.png[Exemple du traffic routier]
+![Exemple du traffix routier](../post/voxxed2023/gen/traffic_flow.png)
 
 Pour un flux de travail optimisé, une équipe doit être :
 
 1. Autonome : dépendre au minimum des autres équipes - aspect organisationel/processus
 2. Alignée _fortement_ : les membres partagent la même vision, les mêmes objectifs, la même compréhension...
 
-===== Golden path - Paved Road
+#### Golden path - Paved Road
 
 Les solutions logicielles créées durent longtemps dans le temps. Plus que ce que nous voudrions! Il faut donc assumer nos décisions dans le temps.
 
@@ -132,7 +132,7 @@ Les solutions logicielles créées durent longtemps dans le temps. Plus que ce q
 * Comment encourager l'adoption d'un outils ? 
 * Comment laisser la liberté et garder une cohérance technique ?
 
-image:gen/golden_path.png[Golden Path spotify]
+![Golden Path spotify](../post/voxxed2023/gen/golden_path.png)
 
 Ci-dessous le détail de ces concepts : 
 
@@ -140,7 +140,7 @@ Ci-dessous le détail de ces concepts :
 * Netflix https://www.infoq.com/news/2017/06/paved-paas-netflix/[paved road]
 
 
-==== La valeur du développement
+#### La valeur du développement
 
 Les développeurs doivent avoir du recul sur leur produit et avoir la vision globale. Ce n'est pas seulement créer, c'est aussi :
 
@@ -165,9 +165,9 @@ Les principes des demos :
 
 Utiliser la méthode https://en.wikipedia.org/wiki/OKR[OKR] (Objective Key Result) : _I will (Objective) as measured by (Key Results)_. 
 
-NOTE: Exemple, Je vais corriger ce bug pour que la majorité des utilisateurs mesurée par 7/10 puissent atteindre le service avec 1 sec de temps de réponse et 1% de taux d'erreur.
+> **_NOTE:_**: Exemple, Je vais corriger ce bug pour que la majorité des utilisateurs mesurée par 7/10 puissent atteindre le service avec 1 sec de temps de réponse et 1% de taux d'erreur.
 
-==== Conclusion
+### Conclusion
 
 Voici les points clés : 
 
@@ -188,7 +188,7 @@ Comment mesure la joie d'une developpeur :
 
 Si besoin, un https://srws7xs87wl.typeform.com/to/aVALqEZi[formulaire] est disponible pour tous les curieux/curieuses.
 
-==== Resenti
+### Mon avis
 
 Le présentateur était très dynamique et très agréable à écouter. Il a donné beaucoup d'information. Il reste plus qu'à creuser et à débattre.
 
