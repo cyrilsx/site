@@ -6,12 +6,13 @@ tags: [emotion, relationship, couple]
 
 Today, I was feeling to give up tech subjects and goes with some notes I did about emotional intelligence.
 As you guessed from the title, we are going to talk about relationship between men and woman. 
-Sometime, it feels that your relationship is getting harder and harder. You and you partner are incapable to
-speak to each other. It looks like a never ending loop.
+Sometime, it feels that your relationship is getting harder and harder. You and you partner are incapable of
+speaking to each other. It looks like a never ending loop.
 
-Today's topic is very much linked with the book of _Daniel Goleman_.
+Today's content is very much linked with the [book](#Reference) of _Daniel Goleman_.
 
-Maybe to understand what is happening right now, we should go back to the childhood and how we are educated.
+First, we should go back to the childhood and how we are educated.  Then we are going to talk about the relationship
+between men and woman. Finally, we will explore the solution.
 
 # Education
 
@@ -43,7 +44,7 @@ Men see their relationship (sex, finance, life...) in a more optimist way than w
 ## What behaviours matter the most ?
 
 The way the spouses discuss sensibles questions are **crucials** for a couple. In a relationship _(in life in general)_, somebody with emotional intelligence
-speaks with **confidence** without aggressiveness and passiveness.
+speaks with **confidence** without aggressiveness and passiveness. 
 
 ### Attasks and defences
 
@@ -90,6 +91,7 @@ Be careful while arguing! You should:
 * reduce the tension
 
 # Conclusion
+
 
 This was notes taken while reading the book about _Emotional Intelligence_. I hope you find it useful and take care!
 
