@@ -1,5 +1,5 @@
 ---
-title: "voxxeddays Zürich - Developer Joy"
+title: "Developer Joy"
 date: 2023-04-18T21:05:05-05:00
 tags: [devops] 
 ---
@@ -27,11 +27,10 @@ Le métier de Dev est l'un des meilleures métiers au monde suivant _Sven_, mais
 du développement n'est plus la même. Comment un développeur peut avoir de la **joie** dans son art :
 
 1. La qualité de développement
-// 
 2. La progression de son développement 
-// Quelles sont les émotions lorsqu'on a l'impression que ça n'avance pas, qu'on est bloqué ? C'est terrible...
+[comment]: <> (Quelles sont les émotions lorsqu'on a l'impression que ça n'avance pas, qu'on est bloqué ? C'est terrible...)
 3. La valeur qu'il apporte au monde (utilisateur, client, assuré, citoyen...)
-// On doit avouer, on se sent bien lorsqu'on sait que notre travail a du sens, qu'il apporte de la valeur
+[comment]: <> (On doit avouer, on se sent bien lorsqu'on sait que notre travail a du sens, qu'il apporte de la valeur)
 
 ## La qualité du `dev`
 
@@ -63,23 +62,12 @@ les pratiques Devops pendant 7 ans et a pu identifier les quatres paramètres cl
 développement - livraison.
 
 
-[%header,cols="2,2",stripes=even]
-|===
-| Métrique 
-| Description
-
-| Fréquence de déploiement # Deployment Frequency
-| La fréquence des mises en production réussies
-
-| Délai d'éxécution des `changes` # Lead time for changes
-| Temps entre la reception de la demande et son passage à un état déployable
-
-| Moyenne des temps de récupération # Mean Time to recover
-| Le temps entre une interruption due à une changement et à une défaillance du système et son rétablissement complet
-
-| Taux d'échec des changements # Change Failure Rate
-| La fréquence avec laquelle les changements qui entrainent des défaillantes ou des pannes après leur déploiement 
-|===
+| Métrique  | Description | 
+| :---      | :----       |
+| Fréquence de déploiement _Deployment Frequency_ | La fréquence des mises en production réussies |
+| Délai d'éxécution des `changes` _Lead time for changes_ | Temps entre la reception de la demande et son passage à un état déployable |
+| Moyenne des temps de récupération _Mean Time to recover_ | Le temps entre une interruption due à une changement et à une défaillance du système et son rétablissement complet |
+| Taux d'échec des changements _Change Failure Rate_ | La fréquence avec laquelle les changements qui entrainent des défaillantes ou des pannes après leur déploiement |
 
 
 Une fois que ces métriques sont disponibles, il faut mettre en place *des baselines* _non-négociable_.
@@ -136,8 +124,8 @@ Les solutions logicielles créées durent longtemps dans le temps. Plus que ce q
 
 Ci-dessous le détail de ces concepts : 
 
-* Spotify https://engineering.atspotify.com/2020/08/how-we-use-golden-paths-to-solve-fragmentation-in-our-software-ecosystem/[golden path]
-* Netflix https://www.infoq.com/news/2017/06/paved-paas-netflix/[paved road]
+* Spotify [golden path](https://engineering.atspotify.com/2020/08/how-we-use-golden-paths-to-solve-fragmentation-in-our-software-ecosystem/)
+* Netflix [paved road](https://www.infoq.com/news/2017/06/paved-paas-netflix/)
 
 
 #### La valeur du développement
@@ -163,7 +151,7 @@ Les principes des demos :
 * Permet de challenger la solution
 * Célébrer et reconnaitre le travail
 
-Utiliser la méthode https://en.wikipedia.org/wiki/OKR[OKR] (Objective Key Result) : _I will (Objective) as measured by (Key Results)_. 
+Utiliser la méthode [OKR](https://en.wikipedia.org/wiki/OKR) (Objective Key Result) : _I will (Objective) as measured by (Key Results)_. 
 
 > **_NOTE:_**: Exemple, Je vais corriger ce bug pour que la majorité des utilisateurs mesurée par 7/10 puissent atteindre le service avec 1 sec de temps de réponse et 1% de taux d'erreur.
 
@@ -186,7 +174,7 @@ Comment mesure la joie d'une developpeur :
 * Temps de monter en puissance
 * Satistaction du developpeur
 
-Si besoin, un https://srws7xs87wl.typeform.com/to/aVALqEZi[formulaire] est disponible pour tous les curieux/curieuses.
+Si besoin, un [formulaire](https://srws7xs87wl.typeform.com/to/aVALqEZi) est disponible pour tous les curieux/curieuses.
 
 ### Mon avis
 
