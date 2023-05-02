@@ -1,3 +1,10 @@
+---
+title: "Introduction  Spring Modulith"
+date: 2023-05-01T21:05:05-05:00
+tags: [java, arch] 
+---
+
+
 === Spring Modulith – Spring for the Architecturally Curious Developer
 Oliver DROTBOHM - https://github.com/odrotbohm[github]
 

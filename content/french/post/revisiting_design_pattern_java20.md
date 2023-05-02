@@ -1,0 +1,373 @@
+---
+title: "La revisite des patrons de conception avec java20"
+date: 2023-05-01T21:05:05-05:00
+tags: [dev, java, voxxeddays] 
+---
+
+# Revisiting Design Patterns after 20
+Par Edson YANAGA.
+
+Edson nous présente comment écrire certaines patrons de conception (design pattern) du _Gang of 4 de 1994:_ avec java 20.
+En introduction, un rappel des généralités sur les design patterns est présenté.
+
+Ci-dessous, les livres _indispensables_  qui ont servi de support:
+
+* [1994] [Design Patterns: Elements of Reusable Object-Oriented Software](https://en.wikipedia.org/wiki/Design_Patterns)
+* [2003] [Domain-Driven Design: Tackling Complexity in the Heart of Software](https://www.amazon.fr/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/ref=sr_1_1?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=PGD08Y3EJWW4&keywords=eric+evans&qid=1679145741&sprefix=eric+evans%2Caps%2C102&sr=8-1)
+* [2008] [Effective Java](https://www.oreilly.com/library/view/effective-java-3rd/9780134686097/)
+
+> **_NOTE:_** Un Design Pattern est une solution à un problème récurrent dans la conception d’applications orientées objet dans un contexte cible.
+
+Enfin, les _design patterns_ permettent d'avoir un langage commun sur l'architecture de nos applications. 
+
+## Rappel de certain principe
+
+* Préférer la composition à l'héritage
+* Réutiliser les interfaces existante en priorité
+* Avoir le moins de méthode possible pour une interface (idéalement une seule)
+
+
+Le même _design pattern_ peut être excellent dans un contexte donné et très mauvais dans un autre.
+
+Ci-dessous les exemples illustrés pendant la présentation.
+Le code est disponible sous https://github.com/yanaga/revisiting-design-patterns[github]
+
+## Chaine de responsabilité
+La chaine de responsabilité est un pattern de comportement qui permet de diminuer le couplage entre les objets.
+image:arch/Chain_of_Responsibility_Design_Pattern_UML.jpg[Chaine de responsabilité]
+
+Exemple dans le JDK : 
+
+* Les filtres dans ServletAPI _javax.servlet.Filter#doFilter()_
+* Logs dans java.utils _java.util.logging.Logger#log()_
+
+#### Illustration
+Une interface avec la méthode business et la référence du prochain objet de la chaine.
+```java
+interface UserNotifier {
+
+    void notify(UserProfile profile);
+    void setNextNotifier(UserNotifier notifier);
+
+}
+
+abstract class AbstractUserNotifier implements UserNotifier {
+    protected UserNotifier nextNotifier;
+
+    @Override
+    public void setNextNotifier(UserNotifier notifier) {
+        this.nextNotifier = notifier;
+    }
+}
+
+```
+
+Ensuite, les classes de la chaine implémente l'interface.
+```java
+class EmailNotifier extends AbstractUserNotifier {
+    @Override
+    public void notify(UserProfile profile) {
+        if (profile.allowsEmail()) {
+            System.out.println("Email sent");
+        } else if (nextNotifier != null) {
+            nextNotifier.notify(profile);
+        } else {
+            throw new RuntimeException("No notification sent");
+        }
+    }
+}
+
+// others classes such as SmsNotifier...
+```
+
+Ensuite, la chaine est assemblée et la classe client l'utilise.
+```java
+// build the chain
+var googleWalletPassUpdateNotifier = new GoogleWalletPassUpdateNotifier();
+var emailNotifier = new EmailNotifier();
+var smsNotifier = new SmsNotifier();
+
+googleWalletPassUpdateNotifier.setNextNotifier(emailNotifier);
+emailNotifier.setNextNotifier(smsNotifier);
+
+// client call
+userNotifier.notify(userProfile);
+```
+
+#### Refactoring using java 20
+Plutôt que crééer une nouvelle interface, `Consumer` and `Predicate` introduit à la version 8 seront utilisés.
+Une alternative serait de créer un alias pour ces interfaces.
+```java
+class GoogleWalletPassUpdateNotifier implements Consumer<UserProfile>, Predicate<UserProfile> {
+    @Override
+    public void accept(UserProfile profile) {
+        System.out.println("Google Wallet Pass updated.");
+    }
+
+    @Override
+    public boolean test(UserProfile profile) {
+        return profile.hasGoogleWalletPass();
+    }
+}
+
+class EmailNotifier implements Consumer<UserProfile> {
+    @Override
+    public void accept(UserProfile profile) {
+        System.out.println("Email sent.");
+    }
+}
+// ...
+// interface UserNotify extend Consumer<UserProfile>, Predicate<UserProfile> {} 
+```
+
+Maintenant, il suffit d'utiliser ces classes : 
+
+```java
+Stream.of(
+           new GoogleWalletPassUpdateNotifier(),
+           new EmailNotifier(),
+           ...
+       .filter(n -> n.test(userProfile))
+       .findFirst()
+       .ifPresent(n -> n.accept(userProfile));
+```
+
+## Visiteur
+
+Il vous arrive de coder plein de `ìf` et `ìnstance of`, puis des casts. Peut-être que le visiteur peut vous aider.
+
+
+Le visiteur propose de placer un comportement nouveau dans une classe séparée que l’on appelle visiteur, plutôt que de l’intégrer dans des classes existantes. L’objet qui devait lancer ce traitement à l’origine est maintenant passé en paramètre des méthodes du visiteur, ce qui permet à la méthode d’avoir accès à toutes les données nécessaires qui se trouvent à l’intérieur de l’objet.
+
+![Pattern Visiteur](../post/voxxed2023/arch/visiteur.png)
+
+Exemples dans JDK :
+
+* `javax.lang.model.element.AnnotationValue` et `AnnotationValueVisitor`
+* `javax.lang.model.element.Element` et `ElementVisitor`
+* `javax.lang.model.type.TypeMirror` et `TypeVisitor`
+* `java.nio.file.FileVisitor` et `SimpleFileVisitor`
+
+#### Double répartition
+
+Le `visiteur` est basé sur le principe de [double répartition](https://refactoring.guru/fr/design-patterns/visitor-double-dispatch). La double répartation est une technique qui permet d'utiliser une 
+liaison dynamique avec des méthodes surchargées.
+
+#### Illustration
+
+Nous allons voir qu'il faut beaucoup de code pour le `visiteur`. Commencons par les deux interfaces nécessaires.
+
+```java
+interface Visitor<T> {
+    T visit(Car car);
+
+    T visit(Book book);
+}
+
+public interface Element {
+
+    void accept(Visitor visitor);
+
+}
+```
+
+Ensuite, il faut implémenter les `Element` à visiter.
+
+```java
+public record Car(BigDecimal price) implements Element<BigDecimal> {
+    @Override
+    public BigDecimal accept(Visiteur visiteur) {
+        return visiteur.visit(this);
+    }
+}
+
+public record Book(BigDecimal price) implements Element<BigDecimal> {
+    @Override
+    public BigDecimal accept(Visiteur visiteur) {
+        return visiteur.visit(this);
+    }
+}
+```
+
+Et enfin il reste l'implémentation du visiteur.
+
+```java
+public class TaxVisiteur implements Visiteur<BigDecimal> {
+
+    @Override
+    public BigDecimal visit(Car car) {
+        return car.price().multiply(BigDecimal.valueOf(0.5));
+    }
+
+    @Override
+    public BigDecimal visit(Alcoohol alcoohol) {
+        return alcoohol.price().multiply(BigDecimal.valueOf(0.6));
+    }
+
+    @Override
+    public BigDecimal visit(Book book) {
+        return book.price().multiply(BigDecimal.valueOf(0.2));
+    }
+}
+```
+
+Toutes les briques du visiteur sont prêtes, il ne reste plus qu'à l'utiliser.
+
+```java 
+VisiteurTax taxVisiteur = new FrenchTaxVisiteur();
+System.out.println(taxVisiteur.visit(new Alcoohol(BigDecimal.TEN)));
+System.out.println(taxVisiteur.visit(new Car(BigDecimal.TEN)));
+System.out.println(taxVisiteur.visit(new Book(BigDecimal.TEN)));
+```
+
+L'exclusivité des éléments à visiter doivent être implémentées sinon le programme ne compile pas. C'est un des avantages du visiteur.
+
+#### Refactoring using java 20
+
+Avec cette nouvelle version de java, il va être possible d'utiliser le pattern matching (avec les `sealed interfaces permits` sinon l'exclusivité des cas n'est pas assurer à la compilation).
+
+```java
+sealed interface VisiteurTax permits Car, Book {
+    double calculate(); // calculate plutôt que accept ;-)
+}
+
+record Car(double price) implements VisiteurTax {
+    @Override
+    public double calculate() {
+        return price * 0.2;
+    }
+}
+
+record Book(double price) implements VisiteurTax {
+    @Override
+    public double calculate() {
+        return price * 0.1;
+    }
+}
+```
+
+Ensuite, il nous reste plus qu'à utiliser le pattern matching pour assurer le fonctionnement initial avec un 
+bonus en plus.
+
+```java
+System.out.println("Tax for book " + calculateTax(new Book(10.0)));
+System.out.println("Tax for car " + calculateTax(new Car(100000.0)));
+
+private static double calculateTaxWithSeal(VisiteurTax visiteurTax) {
+    return switch (visiteurTax) {
+        case Car car -> car.calculate();
+        case Book book when book.price > 100 -> book.calculate();
+        case Book book -> book.calculate();
+        // plus nécessaire d'avoir un case default, tout est assuré                                                    
+    };
+        
+}
+```
+
+## Singleton
+Singleton permet de limiter la classe à une instance.
+
+Exemples dans le JDK :
+
+* `java.lang.Runtime#getRuntime()`
+* `java.lang.System#getSecurityManager()`
+
+#### Illustration
+
+Ci-dessous un exemple de singleton :
+
+```java
+public class LegacySingleton {
+
+    private static final LegacySingleton INSTANCE = new LegacySingleton();
+
+    public static LegacySingleton getInstance() {
+        return INSTANCE;
+    }
+
+}
+```
+
+#### Refactoring using java 20
+
+The revisited version can be done since `enum`.
+
+```java
+public enum RevisitedSingleton {
+    INSTANCE;
+}
+```
+
+## Specification
+
+Le pattern `specification` est issu du livre DDD d'Eric Evans. Il permet de combiner des règles métiers en les chainant les règles ensemble via des opérateurs logiques. Ce pattern peut être trouver dans `QueryDSL`.
+
+![Spécification pattern UML](../post/voxxed2023/arch/Specification_UML.png)
+
+#### Illustration
+Pour commencer, il faut définir une interface avec les opérateurs logiques.
+
+```java
+interface Specification {
+    boolean isSatisfiedBy(String s);
+
+    default Specification and(Specification other) {
+        return new AndSpecification(this, other);
+    }
+    default Specification or(Specification other) {
+        return new AndSpecification(this, other);
+    }
+    default Specification not(Specification other) {
+        return new AndSpecification(this, other);
+    }
+
+}
+```
+
+Puis il faut implémenter les opérateurs logiques.
+
+```java
+record AndSpecification(Specification left, Specification right) implements Specification {
+
+    @Override
+    public boolean isSatisfiedBy(String s) {
+        return left.isSatisfiedBy(s) && right.isSatisfiedBy(s);
+    }
+
+}
+
+record OrSpecification(Specification left, Specification right) implements Specification {
+
+    @Override
+    public boolean isSatisfiedBy(String s) {
+        return left.isSatisfiedBy(s) || right.isSatisfiedBy(s);
+    }
+
+}
+```
+
+Enfin, il suffit de les utiliser ensemble.
+
+```java
+Specification rightLength = s -> s.length() == 16;
+Specification isNumeric = s -> s.matches("\\d+");
+
+Specification potentialCreditCardNumber = rightLength.and(isNumeric);
+System.out.println(potentialCreditCardNumber.isSatisfiedBy("1234123412341234"));
+```
+
+#### Refactoring using java20
+
+Il suffit d'utiliser l'interface `Predicate`.
+
+```java
+Predicate<String> rightLength = s -> s.length() == 16;
+Predicate<String> isNumeric = s -> s.matches("\\d+");
+
+Predicate<String> potentialCreditCardNumber = rightLength.and(isNumeric);
+System.out.println(potentialCreditCardNumber.test("1234123412341234"));
+```
+
+## Resenti
+
+Il est interessant de découvrir les nouvelles fonctionnalités de java en revisitant les patrons de conception.
