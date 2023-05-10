@@ -1,5 +1,5 @@
 ---
-title: "L'IA et les artistes - collaboration ou concurrence"
+title: "Les futurs fonctionnalités après java 20"
 date: 2023-05-09T21:05:05-05:00
 tags: [dev, java, voxxeddays] 
 ---
