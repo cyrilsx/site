@@ -26,7 +26,7 @@ Amber est connu pour les fonctionnalités suivantes :
 * le `switch case`
 * ...
 
-Pour plus d'information, vous pouvez consulter leur https://openjdk.org/projects/amber/[site].
+Pour plus d'information, vous pouvez consulter leur [site](https://openjdk.org/projects/amber/).
 
 ### String Template
 
@@ -201,7 +201,7 @@ class HelloWorld {
 }
 ```
 
-Plus d'information sur https://openjdk.org/projects/amber/design-notes/on-ramp[Paving the on-ramp].
+Plus d'information sur [Paving the on-ramp](https://openjdk.org/projects/amber/design-notes/on-ramp).
 
 ### Super This is relaxed
 
@@ -230,7 +230,7 @@ Le but est de fournir une alternative plus facile, plus performante et plus séc
 Il sera possible de mettre en mémoire hors de la heap, ce qui est critique pour les applications qui repose sur
 Lucene, TensorFlow, Netty et Ignite.
 
-Ci-dessous, un exemple complet tiré de la https://openjdk.org/jeps/424[jep-242 - API] : 
+Ci-dessous, un exemple complet tiré de la [jep-242 - API](https://openjdk.org/jeps/424) : 
 
 ```java
 // 1. Find foreign function on the C library path
@@ -294,12 +294,12 @@ identity record Node(String label, Node next) {
 *Loom* peut actuellement être résumer en deux parties : 
 
 1. `Virtual Thread` permet de décorréler les threads systèmes des threads java. Attention, les virtuals threads ne vont pas remplacer les `java.lang.Thread`.
-2. La concurrence structurée (https://openjdk.org/jeps/428[Structured concurrency]) est une approche pour la programmation _multithread_ qui préserve la lisibilité, maintenir et l'observalibité du code.
+2. La concurrence structurée ([Structured concurrency](https://openjdk.org/jeps/428)) est une approche pour la programmation _multithread_ qui préserve la lisibilité, maintenir et l'observalibité du code.
 
-Voir la section suivante pour plus de détails sur les vhttps://openjdk.org/jeps/425[threads] ou il est possible de consulter leur https://wiki.openjdk.org/display/loom/Getting+started[wiki].
+Voir la section suivante pour plus de détails sur les [threads](vhttps://openjdk.org/jeps/425) ou il est possible de consulter leur [wiki](https://wiki.openjdk.org/display/loom/Getting+started).
 ## Bonus
 
-* https://seanjmullan.org/blog/[Les actualités des version de java et de la sécurité]
-* Les articles https://openjdk.org/projects/valhalla/design-notes/state-of-valhalla/01-background[states of]
-* https://whichjdk.com/[which jdk]
+* [Les actualités des version de java et de la sécurité](https://seanjmullan.org/blog/)
+* Les articles [states of](https://openjdk.org/projects/valhalla/design-notes/state-of-valhalla/01-background)
+* [which jdk](https://whichjdk.com/)
 
