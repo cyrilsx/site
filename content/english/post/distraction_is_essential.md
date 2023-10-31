@@ -25,22 +25,29 @@ For pleasure, I am also going to a nice coffee.♥
 # Positive constructive daydreaming
 When you are not focus, your brain turn on his Default Mode Network (DMN)._This mode use 20% of the body energy, not bad for doing nothing_.
 
-In reality, it's not rest. During this period, it activates old memory, go back and forward between the past, the present and the future. Suddenly, it starts to have imagination and creativity. It's probably during these moments that amazing ideas rise.
+In reality, it's not rest. During this period, it activates old memory, go back and forward between the past, the present and the future. Suddenly, it starts to have imagination and creativity. It's probably during these moments that amazing ideas rise. First, you should imagine something joyful/playful such as running in the wood, lying on the beach or relaxing with a coffee in the morning. Then you keep yourself from the outside world and stay inside your mind with your joyful image while doing your low-key activity.
 
 There are 3 ways to activate this circuit.
 
 ## Positive daydreaming
 Daydreaming is going to re-energize your brain and boost your creativity.
 
-You can do an activity that doesn't require focus such as gardening or reading a casual book.
+You can do an activity that doesn't require focus such as gardening or reading a casual book. During this activity, your mind will start walking around thoughts.
 
 ## Taking nap
+When you brain is overloaded, your clarity and creativity is compromised. Studies show that after 10 minutes nap, you become clearer and more alert. If you have to go for a more intense task, you can go for 90 minutes.
+
+I personnaly go for mini-nap. It's enough for me and it avoid a long wake up time.
+
 
 ## Pretending to be someone else 
+Two educational psychologists (Denis Dumas and Kevin Dunbar) found that people can be more sucessful to problem's solving if you imagine to be a crazy genuis artist instead of being a strict librarian.
 
+# Conclusion
+I hope it can make you feel better to take some short break in order to make you more productive and creative afterwards. 
 
 # Reference
-  https://hbr.org/2017/05/your-brain-can-only-take-so-much-focus
+ - https://hbr.org/2017/05/your-brain-can-only-take-so-much-focus
   
 
 
