@@ -1,6 +1,6 @@
 ---
 title: "Define props with composition API"
-date: 2023-11-21T15:28:25+02:00
+date: 2023-11-10T15:28:25+02:00
 tags: [frontend, dev, vue3] 
 ---
 I didn't find it easily at first but I'm writing a note about this. How to pass properties to a Vue Component using the Composition API ?
