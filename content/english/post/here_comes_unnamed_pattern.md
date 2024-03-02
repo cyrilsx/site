@@ -36,8 +36,8 @@ String value = switch(obj) {
 }
 ```
 
-Also, sealed interface can upgrade our code to something more safe and more readable. Is it the end of the pattern visitor.
-
+Also, sealed interfaces provide a way to update our code to something safer and more readable. Is it the end of the pattern visitor.
+It's a good practice not to use _default_ case to insure that all cases are managed.
 ```java
 sealed interface TaxRate permit EuTaxRate, UsTaxRate {}
 record EuTaxRate extend TaxRate {}
