@@ -1,6 +1,6 @@
 ---
 title: "Code provenant de l'argent public = Code public"
-date: 2024-05-25T09:05:05-05:00
+date: 2024-05-24T09:05:05-05:00
 tags: [dev, opensource] 
 ---
 # Code provenant de l'argent public = Code public
@@ -32,4 +32,3 @@ La loi prévoit des financement entre 2024 et 2027 pour `promouvoir les infrastr
 ## Conclusion
 
 J'ai été surpris du manque de communication de la presse sur ce sujet. La suisse marche dans le bon sens et j'ai hâte de voir la suite avec l'ouverture du code et peut-être des contributions citoyennes.
-
