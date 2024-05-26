@@ -23,6 +23,10 @@ Tout cela avec les avantages que l'opensource représente en terme de sécurité
 Free software foundation a publié une vidéo avec un exemple concret qui permet de mieux comprendre l'impact.
 [Public money, public code]([https://img.youtube.com/vi/watch?v=iuVUzg6x2yo/0.jpg](https://www.youtube.com/watch?v=iuVUzg6x2yo))
 
+{% raw %}
+<iframe width="560" height="315" src="https://www.youtube.com/embed/iuVUzg6x2yo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+{% endraw %}
+
 ## La prochaine étape
 
 La loi prévoit des financement entre 2024 et 2027 pour `promouvoir les infrastructures numériques et les services de base dont l’administration publique a un besoin urgent`(art. 16). Au niveau des services informatique de l'administration fédérale, cela pose plusieurs questions : 
