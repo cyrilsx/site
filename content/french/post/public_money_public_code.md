@@ -18,8 +18,10 @@ Revenons à l'état ! L'agent public qui sert à payer des ingénieurs pour four
 
 Tout cela avec les avantages que l'opensource représente en terme de sécurité, de qualité du code et de partage par exemple.
 
-Free software foundation a publié une vidéo qui permet de mieux comprendre le changement.
-[![Public money, public code]([https://img.youtube.com/vi/watch?v=iuVUzg6x2yo/0.jpg](https://www.youtube.com/watch?v=iuVUzg6x2yo))
+## Exemple 
+
+Free software foundation a publié une vidéo avec un exemple concret qui permet de mieux comprendre l'impact.
+[Public money, public code]([https://img.youtube.com/vi/watch?v=iuVUzg6x2yo/0.jpg](https://www.youtube.com/watch?v=iuVUzg6x2yo))
 
 ## La prochaine étape
 
