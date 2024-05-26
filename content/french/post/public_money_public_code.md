@@ -20,12 +20,10 @@ Tout cela avec les avantages que l'opensource représente en terme de sécurité
 
 ## Exemple 
 
-Free software foundation a publié une vidéo avec un exemple concret qui permet de mieux comprendre l'impact.
+Free software foundation a publié une vidéo avec un exemple concret qui permet de mieux comprendre l'impact : 
 [Public money, public code]([https://img.youtube.com/vi/watch?v=iuVUzg6x2yo/0.jpg](https://www.youtube.com/watch?v=iuVUzg6x2yo))
 
-{% raw %}
 <iframe width="560" height="315" src="https://www.youtube.com/embed/iuVUzg6x2yo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-{% endraw %}
 
 ## La prochaine étape
 
