@@ -14,7 +14,7 @@ Cette loi introduit la publication du code source développé par l'administrati
 
 Imaginons un monde idéal qui suit la philosophie derrière les logiciels opensource. Tout le monde pourrait utiliser en toute confiance un produit et l'améliorer au profit du bien commun. Cela paraît fou sachant que la plupart des produits ont uniquement un but commercial et sont donc fermés.
 
-Revenons à l'état ! L'agent public sert à payer des ingénieurs pour fournir des solutions numériques à l'état et ses concitoyens. Le code source de ces solutions est enfermé dans les dépôts de code de l'état. Il serait logique que ces solutions reviennent au peuple, d'oú l'importance de cette loi.
+Revenons à l'état ! L'argent public sert à payer des ingénieurs pour fournir des solutions numériques à l'état et ses concitoyens. Le code source de ces solutions est enfermé dans les dépôts de code de l'état. Il serait logique que ces solutions reviennent au peuple, d'oú l'importance de cette loi.
 
 Tout cela avec les avantages que l'opensource représente en terme de sécurité, de qualité du code et de partage.
 
