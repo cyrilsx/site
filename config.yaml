@@ -56,14 +56,14 @@ languages:
 title: Careful! Mess ahead!
 theme: cupper-hugo-theme
 # googleAnalytics: UA-123456789-1
-disqusShortname: yourdiscussshortname
+# disqusShortname: yourdiscussshortname
 enableGitInfo: true
 
 taxonomies:
   tag: tags
 
 permalinks:
-  post: /:filename/
+  post: /:contentbasename/
 
 imaging:
   quality: 99
@@ -156,6 +156,7 @@ security:
     - ^npx$
     - ^postcss$
     - ^asciidoctor$
+    - ^git$
     osEnv:
     - (?i)^((HTTPS?|NO)_PROXY|PATH(EXT)?|APPDATA|TE?MP|TERM|GO\w+)$
   funcs:
