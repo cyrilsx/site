@@ -11,7 +11,7 @@ Il existe deux types de paradigme de programmation :
 
 > Un paradigme de programmation est une manière (haut niveau) de concevoir et structurer des programmes informatiques.
 
-Nous allons nous penché sur le côté impératif. Le plus populaire est la POO (Programmation Orienté Objet). 
+Nous allons nous pencher sur le côté impératif. Le plus populaire est la POO (Programmation Orienté Objet). 
 
 ## L'anatomie de l'objet caché par l'encapsulation
 
@@ -23,7 +23,7 @@ Un objet est composé de :
 
 Comme dans la vie réelle, les objets ont des relations entre eux et peuvent intéragir ensemble. 
 Les objets ont un état interne : la structure est caché. Il est possible de modifier la structure de l'objet sans
-impacté les objets qui l'utilisent. Ce concept s'appelle l'**encapsulation** et est un pilier de la POO.
+impacter les objets qui l'utilisent. Ce concept s'appelle l'**encapsulation** et est un pilier de la POO.
 
 ## Les différents types de l'objet créé le polymorphisme
 
@@ -32,13 +32,14 @@ C'est comme si un homme avait plusieurs dénominations :
   - homme
   - être humain
   - vivant
+
 Chacune de ces dénominations correspond à un objet `homme`.
 
 Le type est généralement déclaré par une classe. En java, il est possible de déclarer un type avec les mots clé `class` et `interface`.
 
 ## L'abstraction pour des idées communes
 
-L'**abstraction** est encore un des piliers de la POO. Il permet de rassembler des concepts de haut niveau. Ainsi, l'abstration est d'une grande aide pour la réutilisation de code.
+L'**abstraction** est encore un des piliers de la POO. Il permet de rassembler des concepts de haut niveau. Ainsi, l'abstraction est d'une grande aide pour la réutilisation de code.
 Elle est aussi très utile pendant le développement pour définir des concepts et les utilisés sans se soucier de leurs implémentations.
 
 Par exemple, notre application a besoin d'une communication entre un serveur et un client. Plutôt que passer du temps à développer la solution, il est possible de créer une abstraction et de l'utiliser par le 
@@ -51,7 +52,7 @@ est correcte si le lien de parenté est justifié.
 Certains langages permets un héritage plus ou moins étendu. 
 
 Un exemple d'héritage peut être considéré chez les animaux. 
-Un type `Animal` est un parent d'un type `Mamifère` qui lui même est un parent d'un type `Félin`.
+Un type `Animal` est un parent d'un type `Mamifère` qui lui-même est un parent d'un type `Félin`.
 On peut dire `Félin` est un enfant de `Mamifère`.
 
 ### Questions
