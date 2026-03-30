@@ -54,9 +54,9 @@ Un exemple d'héritage peut être considéré chez les animaux.
 Un type `Animal` est un parent d'un type `Mamifère` qui lui même est un parent d'un type `Félin`.
 On peut dire `Félin` est un enfant de `Mamifère`.
 
-### Question
-* Tentez de trouver d'autres relations qui pourrait utiliser l'héritage ?
-* Selon, quelles sont les inconvénients à l'héritage ?
+### Questions
+- Tentez de trouver d'autres relations qui pourrait utiliser l'héritage ?
+- Selon, quelles sont les inconvénients à l'héritage ?
 
 ## Conclusion
 
