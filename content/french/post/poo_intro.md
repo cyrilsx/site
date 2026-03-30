@@ -55,8 +55,8 @@ Un type `Animal` est un parent d'un type `Mamifère` qui lui même est un parent
 On peut dire `Félin` est un enfant de `Mamifère`.
 
 ### Question
-1- Tentez de trouver d'autres relations qui pourrait utiliser l'héritage ?
-2- Selon, quelles sont les inconvénients à l'héritage ?
+* Tentez de trouver d'autres relations qui pourrait utiliser l'héritage ?
+* Selon, quelles sont les inconvénients à l'héritage ?
 
 ## Conclusion
 
