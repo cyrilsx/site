@@ -3,13 +3,6 @@ title: "Mistral AI lève 830 millions de dollars pour construire son propre data
 date: 2026-03-31
 ---
 
-# Mistral AI lève 830 millions de dollars pour construire son propre data center en France
-
-**Publié le 30 mars 2026 par The Next Web**
-*Article original : [Mistral secures $830M from seven banks to build its own AI data centre](https://thenextweb.com/news/mistral-ai-830m-debt-data-centre-paris)*
-
----
-
 ## Contexte : Mistral AI, une pépite européenne de l'IA
 
 Fondée en **avril 2023** par **Arthur Mensch** (ex-Google DeepMind), **Guillaume Lample** et **Timothée Lacroix** (ex-Meta), Mistral AI
